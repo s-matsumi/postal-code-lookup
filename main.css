@@ -1,0 +1,59 @@
+#postal-code-lookup-balloon {
+  position: absolute;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 7px 10px;
+  width: 300px;
+  color: #555;
+  font-size: 16px;
+  background: #fff;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  z-index: 10000;
+}
+
+#postal-code-lookup-balloon:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 15%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #fff;
+  z-index: 10002;
+}
+
+#postal-code-lookup-balloon:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 15%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-bottom: 14px solid #555;
+  z-index: 10001;
+}
+
+.postal-code-lookup-balloon-button {
+  position: absolute;
+  top: 2px;
+  left: 280px;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10004;
+}
+
+.postal-code-lookup-balloon-content {
+  z-index: 10003;
+}
+
+.postal-code-lookup-balloon-p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
