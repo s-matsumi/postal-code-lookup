@@ -1,4 +1,6 @@
+// 拡張機能をインストール時に実行
 chrome.runtime.onInstalled.addListener(function () {
+  // 右クリックメニューの項目を作成
   chrome.contextMenus.create({
     id: "lookup_postal_code",
     title: "郵便番号を逆引き",
@@ -6,7 +8,9 @@ chrome.runtime.onInstalled.addListener(function () {
   });
 });
 
+// 右クリックメニュー選択時に実行
 chrome.contextMenus.onClicked.addListener((info, tab) => {
+  // どの項目が選択されたのか判定
   if (info.menuItemId === "lookup_postal_code") {
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
@@ -25,6 +29,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
           // 吹き出しを作成
           const balloon = document.createElement("div");
+          // あらかじめ挿入してあるスタイルのIDを指定
           balloon.id = "postal-code-lookup-balloon";
           // 吹き出しの座標を選択範囲の直下に設定
           balloon.style.left = `${window.scrollX + clientRect.x}px`;
@@ -36,7 +41,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
           const button = document.createElement("button");
           button.className = "postal-code-lookup-balloon-button";
           button.textContent = "x";
-          // あらかじめ注入してある関数を指定
+          // あらかじめ挿入してある関数を指定
           button.onclick = postalCodeLookupCloseBalloon;
           balloon.appendChild(button);
 
