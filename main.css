@@ -1,4 +1,5 @@
 #postal-code-lookup-balloon {
+  all: initial;
   position: absolute;
   display: inline-block;
   margin-top: 1em;
@@ -13,6 +14,7 @@
 }
 
 #postal-code-lookup-balloon:before {
+  all: initial;
   content: "";
   position: absolute;
   top: -24px;
@@ -24,6 +26,7 @@
 }
 
 #postal-code-lookup-balloon:after {
+  all: initial;
   content: "";
   position: absolute;
   top: -30px;
@@ -35,6 +38,7 @@
 }
 
 .postal-code-lookup-balloon-button {
+  all: initial;
   position: absolute;
   top: 2px;
   left: 280px;
@@ -49,10 +53,13 @@
 }
 
 .postal-code-lookup-balloon-content {
+  all: initial;
   z-index: 10003;
 }
 
 .postal-code-lookup-balloon-p {
+  all: initial;
+  display: block;
   text-align: left;
   margin: 0;
   padding: 0;
