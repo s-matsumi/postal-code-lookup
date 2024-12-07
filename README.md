@@ -1,6 +1,6 @@
 # postal-code-lookup
 
-郵便番号から住所を逆引きするChrome拡張機能です。
+住所から郵便番号を逆引きするChrome拡張機能です。
 
 ## 使い方
 
